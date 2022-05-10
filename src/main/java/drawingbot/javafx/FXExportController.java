@@ -196,8 +196,8 @@ public class FXExportController {
         checkBoxGCodeCenterZeroPoint.setSelected(DrawingBotV3.INSTANCE.gcodeSettings.gcodeCenterZeroPoint.getValue());
         checkBoxGCodeCenterZeroPoint.selectedProperty().bindBidirectional(DrawingBotV3.INSTANCE.gcodeSettings.gcodeCenterZeroPoint);
 
-        checkBoxGCodeMirror.setSelected(DrawingBotV3.INSTANCE.gcodeMirror.getValue());
-        checkBoxGCodeMirror.selectedProperty().bindBidirectional(DrawingBotV3.INSTANCE.gcodeMirror);
+        checkBoxGCodeMirror.setSelected(DrawingBotV3.INSTANCE.gcodeSettings.gcodeMirror.getValue());
+        checkBoxGCodeMirror.selectedProperty().bindBidirectional(DrawingBotV3.INSTANCE.gcodeSettings.gcodeMirror);
 
         choiceBoxCommentTypes.getItems().addAll(GCodeBuilder.CommentType.values());
         choiceBoxCommentTypes.setValue(GCodeBuilder.CommentType.BRACKETS);
