@@ -145,6 +145,7 @@ public class FXExportController {
     public TextField textFieldGCodeCurveFlatness = null;
     public CheckBox checkBoxGCodeEnableFlattening = null;
     public CheckBox checkBoxGCodeCenterZeroPoint = null;
+    public CheckBox checkBoxGCodeMirror = null;
     public ChoiceBox<GCodeBuilder.CommentType> choiceBoxCommentTypes = null;
 
     public TextArea textAreaGCodeStart = null;
@@ -195,6 +196,8 @@ public class FXExportController {
         checkBoxGCodeCenterZeroPoint.setSelected(DrawingBotV3.INSTANCE.gcodeSettings.gcodeCenterZeroPoint.getValue());
         checkBoxGCodeCenterZeroPoint.selectedProperty().bindBidirectional(DrawingBotV3.INSTANCE.gcodeSettings.gcodeCenterZeroPoint);
 
+        checkBoxGCodeMirror.setSelected(DrawingBotV3.INSTANCE.gcodeMirror.getValue());
+        checkBoxGCodeMirror.selectedProperty().bindBidirectional(DrawingBotV3.INSTANCE.gcodeMirror);
 
         choiceBoxCommentTypes.getItems().addAll(GCodeBuilder.CommentType.values());
         choiceBoxCommentTypes.setValue(GCodeBuilder.CommentType.BRACKETS);

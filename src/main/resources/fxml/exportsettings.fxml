@@ -376,7 +376,7 @@
                                                       <Font name="System Bold" size="12.0" />
                                                    </font>
                                                 </Label>
-                                                <Label contentDisplay="RIGHT" graphicTextGap="5.0" prefHeight="25.0" prefWidth="120.0" text="Flattening">
+                                                <Label contentDisplay="RIGHT" graphicTextGap="5.0" prefHeight="25.0" prefWidth="100.0" text="Flattening">
                                                    <font>
                                                       <Font name="System Bold" size="12.0" />
                                                    </font>
@@ -384,6 +384,14 @@
                                                       <CheckBox fx:id="checkBoxGCodeEnableFlattening" mnemonicParsing="false" />
                                                    </graphic>
                                                 </Label>
+                                                <Label contentDisplay="RIGHT" graphicTextGap="5.0" prefHeight="25.0" prefWidth="70.0" text="Mirror">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <CheckBox fx:id="checkBoxGCodeMirror" mnemonicParsing="false" />
+                                                   </graphic>
+                                                </Label>												
                                              </children>
                                           </HBox>
                                           <Separator layoutX="14.0" layoutY="43.0" prefWidth="200.0" />

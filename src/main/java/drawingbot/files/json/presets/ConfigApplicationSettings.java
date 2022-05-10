@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class ConfigApplicationSettings implements IConfigData {
 
-    public boolean isDeveloperMode;
+    public boolean isDeveloperMode = true;
     public int maxTextureSize = -1;
 
     ///path optimisation

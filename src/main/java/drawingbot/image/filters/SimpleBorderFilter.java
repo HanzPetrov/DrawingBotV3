@@ -55,6 +55,7 @@ public class SimpleBorderFilter extends AbstractBufferedImageOp{
             borderImg = ImageTools.lazyRGBFilter(borderImg, ImageTools::invertFilter);
 
             dest = ImageTools.lazyBlend(dest, borderImg, EnumBlendMode.ADD);
+            //dest = ImageTools.lazyBlend(dest, borderImg, EnumBlendMode.NORMAL); //ADD);
         }
         return dest;
     }

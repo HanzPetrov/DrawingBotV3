@@ -180,7 +180,8 @@ public class FXApplication extends Application {
 
     public static void applyCurrentTheme(Scene scene){
         if (ConfigFileHandler.getApplicationSettings().darkTheme) {
-            scene.getRoot().setStyle("-fx-base: rgba(30, 30, 30, 255); -fx-accent: rgba(0, 100, 134, 255);");
+            //scene.getRoot().setStyle("-fx-base: rgba(30, 30, 30, 255); -fx-accent: rgba(0, 100, 134, 255);");
+            scene.getRoot().setStyle("-fx-base: rgba(127, 127, 127, 255); -fx-accent: rgba(0, 100, 134, 255);");
         } else {
             scene.getRoot().setStyle("");
         }

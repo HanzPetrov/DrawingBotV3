@@ -124,7 +124,9 @@ public class ImageTools {
         // paint both images, preserving the alpha channels
         Graphics2D g = combined.createGraphics();
         g.drawImage(image, 0, 0, null);
+        //g.setComposite(AlphaComposite.Src);
         g.setComposite(new BlendComposite(blendMode));
+        g.setComposite(AlphaComposite.SrcOver);
         g.drawImage(overlay, 0, 0, null);
 
 
