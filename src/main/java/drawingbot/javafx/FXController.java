@@ -489,6 +489,7 @@ public class FXController {
         viewportScrollPane.setMaxWidth(Double.MAX_VALUE);
         viewportScrollPane.setMaxHeight(Double.MAX_VALUE);
         viewportScrollPane.setPannable(true);
+        viewportScrollPane.setStyle("-fx-background: GREY;");
         VBox.setVgrow(viewportScrollPane, Priority.ALWAYS);
         vBoxViewportContainer.getChildren().add(viewportScrollPane);
 
