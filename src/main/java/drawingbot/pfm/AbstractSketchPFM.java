@@ -96,6 +96,9 @@ public abstract class AbstractSketchPFM extends AbstractDarkestPFM {
             }
 
             endSquiggle();
+            if (tools.pfmTask.sketchPFMProgressCallback != null){
+                return;
+            }
         }
     }
 
