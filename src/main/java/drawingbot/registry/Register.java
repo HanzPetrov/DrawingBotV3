@@ -252,7 +252,8 @@ public class Register implements IPlugin {
 
         MasterRegistry.INSTANCE.registerImageFilter(EnumFilterTypes.BORDERS, SimpleBorderFilter.class, "Dirty Border", SimpleBorderFilter::new, false);
         MasterRegistry.INSTANCE.registerImageFilterSetting(GenericSetting.createRangedIntSetting(SimpleBorderFilter.class, "Type", 1, 1, 13, (filter, value) -> filter.borderNumber = value).setRandomiseExclude(true));
-
+        MasterRegistry.INSTANCE.registerImageFilter(EnumFilterTypes.BORDERS, AlphaBorderFilter.class, "Alpha Border", AlphaBorderFilter::new, false);
+        MasterRegistry.INSTANCE.registerImageFilterSetting(GenericSetting.createRangedIntSetting(AlphaBorderFilter.class, "Type", 1, 1, 3, (filter, value) -> filter.borderNumber = value).setRandomiseExclude(true));
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
