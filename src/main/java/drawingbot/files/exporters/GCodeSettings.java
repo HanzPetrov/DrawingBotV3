@@ -20,6 +20,7 @@ public class GCodeSettings implements IProperties {
     public final SimpleFloatProperty gcodeCurveFlatness = new SimpleFloatProperty(0.1F);
     public final SimpleBooleanProperty gcodeEnableFlattening = new SimpleBooleanProperty(true);
     public final SimpleBooleanProperty gcodeCenterZeroPoint = new SimpleBooleanProperty(false);
+    public final SimpleBooleanProperty gcodeMirror = new SimpleBooleanProperty(false);
     public final SimpleObjectProperty<GCodeBuilder.CommentType> gcodeCommentType = new SimpleObjectProperty<>(GCodeBuilder.CommentType.BRACKETS);
 
     public final ObservableList<Property<?>> observables = PropertyUtil.createPropertiesList(gcodeOffsetX, gcodeOffsetY, gcodeUnits, gcodeStartCode, gcodeEndCode, gcodePenDownCode, gcodePenUpCode, gcodeStartLayerCode, gcodeEndLayerCode, gcodeCurveFlatness, gcodeEnableFlattening, gcodeCenterZeroPoint, gcodeCommentType);
@@ -54,6 +55,7 @@ public class GCodeSettings implements IProperties {
 
         copy.gcodeEnableFlattening.set(gcodeEnableFlattening.get());
         copy.gcodeCenterZeroPoint.set(gcodeCenterZeroPoint.get());
+        copy.gcodeMirror.set(gcodeMirror.get());
         copy.gcodeCommentType.set(gcodeCommentType.get());
         return copy;
     }
