@@ -49,7 +49,7 @@
                   </ScrollPane>
                   <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="43.0" prefWidth="419.0" VBox.vgrow="NEVER">
                      <children>
-                        <Button fx:id="buttonStartPlotting" layoutX="9.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-base: -fx-default-button;" text="Start" />
+                        <Button fx:id="buttonStartPlotting" layoutX="9.0" layoutY="8.0" mnemonicParsing="true" prefHeight="25.0" prefWidth="88.0" style="-fx-base: -fx-default-button;" text="_Start" />
                         <Button fx:id="buttonStopPlotting" cancelButton="true" layoutX="104.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Stop" />
                         <Button fx:id="buttonResetPlotting" cancelButton="true" layoutX="198.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Reset" />
                         <Button fx:id="buttonSaveVersion" cancelButton="true" layoutX="317.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Save Version" />
