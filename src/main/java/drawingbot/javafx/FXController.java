@@ -281,13 +281,14 @@ public class FXController {
                     settingsStage.initModality(Modality.NONE);
                     settingsStage.initOwner(FXApplication.primaryStage);
                     settingsStage.setTitle(pane.getText());
-                    settingsStage.setResizable(false);
+                    settingsStage.setResizable(true);
 
                     //create the root node
                     ScrollPane scrollPane = new ScrollPane();
                     scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
                     scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
                     scrollPane.setPrefWidth(420);
+                    //scrollPane
 
                     //transfer the content
                     Node content = pane.getContent();
@@ -312,6 +313,9 @@ public class FXController {
                     settingsStage.setOnCloseRequest(event -> redockSettingsPane(pane));
                     FXApplication.applyDBStyle(settingsStage);
                     settingsStage.show();
+                    settingsStage.maxWidthProperty().bind(settingsStage.widthProperty());
+                    settingsStage.minWidthProperty().bind(settingsStage.widthProperty());
+                    //settingsStage.sizeToScene();
                 }else{
                     redockSettingsPane(pane);
                     currentStage.close();
