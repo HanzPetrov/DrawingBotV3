@@ -11,6 +11,7 @@ public abstract class AbstractSketchPFM extends AbstractDarkestPFM {
 
     //user settings
     public int squiggleLength;
+    public int squiggleMinLength;
     public float squiggleDeviation;
 
     public int adjustbrightness;
@@ -44,6 +45,11 @@ public abstract class AbstractSketchPFM extends AbstractDarkestPFM {
             minLineLength = maxLineLength;
             maxLineLength = value;
         }
+        if(squiggleLength < squiggleMinLength){
+            int value = squiggleMinLength;
+            squiggleMinLength = squiggleLength;
+            squiggleLength = value;
+        }
         initialLuminance = this.tools.getPixelData().getAverageLuminance();
     }
 
@@ -76,7 +82,7 @@ public abstract class AbstractSketchPFM extends AbstractDarkestPFM {
                 float next = findDarkestNeighbour(tools.getPixelData(), current, darkest);
 
                 //if the first line has been drawn and the next neighbour isn't dark enough to add to the squiggle, end it prematurely
-                if(s > 3 && (next == -1 || next > allowableDarkness || next > tools.getPixelData().getAverageLuminance())){
+                if(s > 3 && (s >= squiggleMinLength - 1) && (next == -1 || next > allowableDarkness || next > tools.getPixelData().getAverageLuminance())){
                     endSquiggle();
 
                     //there are no valid lines from this point, brighten it slightly so we don't test it again immediately.
@@ -90,8 +96,10 @@ public abstract class AbstractSketchPFM extends AbstractDarkestPFM {
                 current[1] = darkest[1];
 
                 if(updateProgress(tools) || tools.isFinished()){
-                    endSquiggle();
-                    return;
+                    if(s >= squiggleMinLength - 1){
+                        endSquiggle();
+                        return;
+                    }
                 }
             }
 
