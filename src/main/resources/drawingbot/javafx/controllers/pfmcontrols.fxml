@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane prefWidth="404.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="drawingbot.javafx.controllers.FXPFMControls">
-   <VBox fillWidth="false" prefWidth="404.0" spacing="8.0">
+   <VBox prefWidth="404.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
           <Label contentDisplay="RIGHT" graphicTextGap="8.0" prefHeight="25.0" prefWidth="403.0" text="Path Finding Module: ">
               <graphic>
@@ -29,12 +29,12 @@
             </children>
          </HBox>
       
-          <TableView fx:id="tableViewAdvancedPFMSettings" editable="true" prefHeight="237.0" prefWidth="390.0" tableMenuButtonVisible="true">
+          <TableView fx:id="tableViewAdvancedPFMSettings" editable="true" prefHeight="237.0" prefWidth="390.0" tableMenuButtonVisible="true" VBox.vgrow="ALWAYS">
               <columns>
                   <TableColumn fx:id="tableColumnSetting" editable="false" prefWidth="132.0" text="Setting" />
                   <TableColumn fx:id="tableColumnControl" prefWidth="137.0" text="Control" />
                   <TableColumn fx:id="tableColumnValue" prefWidth="89.0" text="Value" />
-                  <TableColumn fx:id="tableColumnLock" prefWidth="45.0" text="Randomise Exclude" visible="false" />
+                  <TableColumn fx:id="tableColumnLock" prefWidth="45.0" text="Randomise Exclude" visible="true" />
               </columns>
           </TableView>
          <HBox prefHeight="25.0" spacing="8.0">

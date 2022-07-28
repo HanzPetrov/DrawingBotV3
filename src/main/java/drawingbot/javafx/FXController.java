@@ -288,7 +288,8 @@ public class FXController {
                     scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
                     scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
                     scrollPane.setPrefWidth(420);
-                    //scrollPane
+                    scrollPane.setFitToHeight(true);
+                    scrollPane.setFitToWidth(true);
 
                     //transfer the content
                     Node content = pane.getContent();
@@ -313,9 +314,6 @@ public class FXController {
                     settingsStage.setOnCloseRequest(event -> redockSettingsPane(pane));
                     FXApplication.applyDBStyle(settingsStage);
                     settingsStage.show();
-                    settingsStage.maxWidthProperty().bind(settingsStage.widthProperty());
-                    settingsStage.minWidthProperty().bind(settingsStage.widthProperty());
-                    //settingsStage.sizeToScene();
                 }else{
                     redockSettingsPane(pane);
                     currentStage.close();
